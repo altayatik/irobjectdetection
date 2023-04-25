@@ -77,14 +77,14 @@ void loop() {
       if (digitalRead(inputPin) == HIGH) {
         objectRemoved = true;
         timerdownStart = millis();
-        Serial.println("Chair Abandoned");
+        Serial.println("Range Abandoned");
         Serial.println("Return in 15");
         digitalWrite(red, HIGH);
         digitalWrite(yellow, LOW);
 
         //START THE 15 MINUTE WAIT
         delay(time_up); //wait 15 minutes
-        Serial.println("Return Chair");
+        Serial.println("Return in Range");
         Serial.println("Reset device");
         digitalWrite(red, HIGH);
         digitalWrite(yellow, HIGH);
